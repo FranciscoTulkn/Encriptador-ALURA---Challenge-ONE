@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Uso de Google Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@200;400;600&family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+    <!--Uso de Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Link JavaScript-->
+    <script type="text/JAVASCRIPT" src="scripts.js"></script> 
+    <title>Encriptador ALURA</title>
+</head>
+<body>
+    <header class="container">
+        <img class="iconoALura" src="/img/Vector.png">
+        <h1>ENCRIPTADOR DE TEXTO</h1>
+        <hr>
+    </header>
+
+    <div class="container">
+        <main class="areaEncriptador">
+            <div class="area1">
+                <form action="encriptar">
+                    <label for="w3review">Encripta tu mensaje</label>
+                    <p class="aviso"><img src="/img/Aviso.png"> Solo letras minúsculas y sin acentos</p>
+                    <textarea placeholder="Ingrese el texto aquí" class="entrada" id="textoEncriptar"></textarea>
+                    <div class="main-btn">
+                        <button class="btn" type="button" id="botonEncriptar">Encriptar</button>
+                        <button class="btn" type="button" id="botonDesencriptar">Desencriptar</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="area2">
+                <form action="salida_encriptador">
+                    <textarea placeholder="Aquí se mostrara el mensaje encriptado" class="salida" id="textoDesencriptado"></textarea>  
+                    <button class="btn" type="button" id="botonCopiar">Copiar</button>
+                </form>
+            </div>
+        </main>
+        
+    </div>
+    <footer class="footer">
+        <p>Autor <a href="#">©2022 Francisco Javier Tulcán Rodríguez</a></p>
+        <a href="https://github.com/FranciscoTulkn"><i class="fa-brands fa-github"></i></i></a>
+        <a href="www.linkedin.com/in/franciscotulkn-li-dev"><i class="fa-brands fa-linkedin"></i></a>
+    </section>
+</body>
+<script>
+    var btn = document.querySelector('#botonEncriptar');
+    btn.onclick = encriptar;
+    var btn2 = document.querySelector('#botonDesencriptar');
+    btn2.onclick = desencriptar;
+    var btn3 = document.querySelector('#botonCopiar');
+    btn3.onclick = copiar;
+</script>
+</html>
